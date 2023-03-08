@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./build/*.{html,js}'],
+  content: ['./build/**/*.{html,js}'],
   theme: {
     container: {
       center: true,
@@ -33,7 +33,17 @@ module.exports = {
         '33': '8.25rem',
         '34': '8.5rem',
         '46': '11.5rem',
-    },
+      },
+      keyframes: {
+        'open-menu': {
+          '0%': { transform: 'scaleX(0)' },
+          '80%': { transform: 'scaleX(1.2)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+      },
+      animation: {
+        'open-menu': 'open-menu 0.5s ease-in-out forwards',
+      },
     },
     
     plugins: [],
