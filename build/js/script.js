@@ -26,15 +26,31 @@ const initApp = () => {
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mainMenu = document.getElementById('main-menu')
     const backgroundMobileMenu = document.getElementById('background-mobile-menu')
+    const closeMobileMenu = document.getElementById('close-mobile-menu')
 
     const toogleMenu = () => {
-        mainMenu.classList.toggle('hidden')
-        backgroundMobileMenu.classList.toggle('hidden')
-        hamburgerBtn.classList.toggle('toggle-hamburger-button')
+        //mainMenu.classList.toggle('hidden')
+        mainMenu.classList.toggle('-left-full')
+        mainMenu.classList.toggle('left-0')
+        
+        backgroundMobileMenu.classList.toggle('-left-full')
+        backgroundMobileMenu.classList.toggle('left-0')
     }
 
     hamburgerBtn.addEventListener('click', toogleMenu)
-    mainMenu.addEventListener('click', toogleMenu)
+    closeMobileMenu.addEventListener('click', toogleMenu)
 }
 
 document.addEventListener('DOMContentLoaded', initApp)
+
+//banner detect width element and assing value height
+const bigBannerSquare = document.querySelector('.big-banner-square')
+const smallBanner = document.querySelectorAll('.small-banner')
+
+let widthElement = bigBannerSquare.offsetWidth
+
+bigBannerSquare.setAttribute("style", `height: ${widthElement}px`) 
+smallBanner.forEach((banner) => {
+    console.log(banner)
+    banner.setAttribute("style", `height:${widthElement/2}px`)
+})
