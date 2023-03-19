@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       transitionProperty: {
         'left': 'left',
+        'max-h': 'max-h-0, max-h-min, max-h-min, max-h-full, max-h-screen'
       },
       spacing: {
         'fluid-1': 'clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem)',

@@ -57,6 +57,7 @@ const showSearchInput = () => {
     gradientBlock.classList.toggle('visible')
 }
 search.addEventListener('click', showSearchInput)
+gradientBlock.addEventListener('click', showSearchInput)
 
 //banner detect width element and assing value height
 const bigBannerSquare = document.querySelector('.big-banner-square')
@@ -66,8 +67,20 @@ let widthElement = bigBannerSquare.offsetWidth
 
 bigBannerSquare.setAttribute("style", `height: ${widthElement}px`) 
 smallBanner.forEach((banner) => {
-    console.log(banner)
+    //console.log(banner)
     banner.setAttribute("style", `height:${widthElement/2}px`)
 })
 
-//search
+//dropmenu
+const dropmenuBtns = document.querySelectorAll('.dropmenu-btn')
+
+dropmenuBtns.forEach(dropmenuBtn => {
+
+    const showDropMenu = () => {
+        dropmenuBtn.parentElement.classList.toggle('bg-gray-200')
+        dropmenuBtn.parentElement.classList.toggle('dark:bg-gray-700')
+        dropmenuBtn.classList.toggle('after:rotate-90')
+        dropmenuBtn.nextElementSibling.classList.toggle('max-h-0')
+    }
+    dropmenuBtn.addEventListener('click', showDropMenu)
+})
