@@ -423,6 +423,29 @@ html {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.active-link {
+  position: relative;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.active-link::after {
+  position: relative;
+  left: -1px;
+  margin-top: 0.125rem;
+  display: block;
+  height: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -683,8 +706,25 @@ html {
   margin: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline {
@@ -719,6 +759,10 @@ html {
   height: 4.5rem;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -749,6 +793,10 @@ html {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .w-5 {
@@ -831,6 +879,10 @@ html {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-16 {
@@ -954,6 +1006,10 @@ html {
   stroke: #000;
 }
 
+.stroke-gray-400 {
+  stroke: #9ca3af;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1054,6 +1110,11 @@ html {
   text-align: end;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1080,9 +1141,26 @@ html {
   text-transform: none;
 }
 
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1138,6 +1216,29 @@ html {
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.target\:active-link:target {
+  position: relative;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.target\:active-link:target::after {
+  position: relative;
+  left: -1px;
+  margin-top: 0.125rem;
+  display: block;
+  height: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .before\:absolute::before {
@@ -1258,12 +1359,8 @@ html {
   transition-duration: 500ms;
 }
 
-.hover\:overflow-auto:hover {
-  overflow: auto;
-}
-
-.hover\:overflow-visible:hover {
-  overflow: visible;
+.target\:block:target {
+  display: block;
 }
 
 .hover\:fill-black:hover {
@@ -1779,3 +1876,4 @@ html {
     line-height: 1.75rem;
   }
 }
+

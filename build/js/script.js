@@ -84,3 +84,25 @@ dropmenuBtns.forEach(dropmenuBtn => {
     }
     dropmenuBtn.addEventListener('click', showDropMenu)
 })
+
+//switcher cat tab
+const allCatTab = document.querySelectorAll('.cat-tab')
+const allTabContent = document.querySelectorAll('.tab-content')
+
+allCatTab.forEach((catTab, index) => {
+    catTab.addEventListener('click', () => {
+        allCatTab.forEach(catTab => {
+            catTab.classList.remove('active-link')
+        })
+        if (!catTab.classList.contains('active-link')) 
+            catTab.classList.add('active-link')
+        allTabContent.forEach(tabContent => {
+            tabContent.classList.remove('block')
+            tabContent.classList.add('hidden')
+            })
+  
+        allTabContent[index].classList.add('block')
+        allTabContent[index].classList.remove('hidden')
+  
+    })
+})

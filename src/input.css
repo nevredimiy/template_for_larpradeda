@@ -6,4 +6,9 @@
   html {
     font-family: 'Nunito Sans', sans-serif;
   }
+
+  .active-link {
+    @apply relative text-black transition-all after:transition-all after:block after:bg-black after:relative after:-left-px after:mt-0.5 after:h-0.5
+  }
 }
+
