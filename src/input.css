@@ -8,7 +8,15 @@
   }
 
   .active-link {
-    @apply relative text-black transition-all after:transition-all after:block after:bg-black after:relative after:-left-px after:mt-0.5 after:h-0.5
+    @apply relative text-black transition-all after:transition-all after:duration-700 after:block after:bg-black after:relative after:-left-px after:mt-0.5 after:h-0.5
+  }
+
+  .hide-btn {
+    @apply opacity-0 invisible translate-x-6
+  }
+
+  .show-btn {
+    @apply opacity-100 visible translate-x-0
   }
 }
 

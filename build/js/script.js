@@ -97,12 +97,28 @@ allCatTab.forEach((catTab, index) => {
         if (!catTab.classList.contains('active-link')) 
             catTab.classList.add('active-link')
         allTabContent.forEach(tabContent => {
-            tabContent.classList.remove('block')
+            tabContent.classList.remove('flex')
             tabContent.classList.add('hidden')
             })
   
-        allTabContent[index].classList.add('block')
+        allTabContent[index].classList.add('flex')
         allTabContent[index].classList.remove('hidden')
   
+    })
+})
+
+
+//quik view
+const allProductCard = document.querySelectorAll('.product-card')
+const allQuickViewBtn = document.querySelectorAll('.quick-view-btn')
+
+allProductCard.forEach(productCard => {
+    productCard.addEventListener('mouseenter', () => {
+        productCard.children[0].classList.remove('hide-btn')
+        productCard.children[0].classList.add('show-btn')        
+    })
+    productCard.addEventListener('mouseleave', () => {
+        productCard.children[0].classList.add('hide-btn')
+        productCard.children[0].classList.remove('show-btn') 
     })
 })
